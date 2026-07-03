@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Site simples e otimizado sobre mercado financeiro — cotações, gráfico e resumo." />
+  <title>Mercado Financeiro — Simples e Rápido</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:;base64,=">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <h1 class="site-title">Mercado Financeiro</h1>
+      <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#resumo">Resumo</a></li>
+          <li><a href="#grafico">Gráfico</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section id="hero" class="hero">
+      <h2>Entenda o mercado com visual simples e rápido</h2>
+      <p class="lead">Informações em tempo-simulado sobre índices e um gráfico interativo. Código otimizado para desempenho e acessibilidade.</p>
+    </section>
+
+    <section id="resumo" class="market-summary" aria-labelledby="resumo-title">
+      <h3 id="resumo-title">Resumo do Mercado</h3>
+      <div class="cards" id="cards" aria-live="polite" aria-atomic="true">
+        <!-- Cartões preenchidos por JavaScript -->
+      </div>
+      <div class="controls">
+        <button id="refreshBtn" class="btn" aria-label="Atualizar cotações">Atualizar</button>
+        <small class="muted">Dados de exemplo — use API real conforme necessário.</small>
+      </div>
+    </section>
+
+    <section id="grafico" class="chart-section" aria-labelledby="grafico-title">
+      <h3 id="grafico-title">Gráfico</h3>
+      <div class="chart-controls" role="tablist" aria-label="Período do gráfico">
+        <button class="tab" data-range="1" aria-selected="true">1D</button>
+        <button class="tab" data-range="7">1W</button>
+        <button class="tab" data-range="30">1M</button>
+      </div>
+      <div class="chart-wrap" role="region" aria-label="Gráfico de preço">
+        <canvas id="chartCanvas" width="800" height="300" aria-hidden="false"></canvas>
+      </div>
+    </section>
+
+    <section id="recursos" class="resources" aria-labelledby="recursos-title">
+      <h3 id="recursos-title">Recursos rápidos</h3>
+      <ul>
+        <li>Layout responsivo (desktop/mobile)</li>
+        <li>Sem bibliotecas externas → carregamento rápido</li>
+        <li>Fácil de ligar a APIs reais (ex.: Alpha Vantage, IEX Cloud)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> — Projeto de demonstração. Código aberto.</p>
+      <p><a href="README.md">Como usar / publicar</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
